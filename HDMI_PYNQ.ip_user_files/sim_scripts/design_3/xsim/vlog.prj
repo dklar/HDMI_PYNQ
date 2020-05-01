@@ -1,0 +1,34 @@
+verilog xil_defaultlib --include "../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/4fba" \
+"../../../bd/design_3/ip/design_3_HDMI_HPD_0/sim/design_3_HDMI_HPD_0.v" \
+"../../../bd/design_3/ip/design_3_clk_wiz_0_0/design_3_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/design_3/ip/design_3_clk_wiz_0_0/design_3_clk_wiz_0_0.v" \
+"../../../bd/design_3/ip/design_3_v_axi4s_vid_out_0_0/sim/design_3_v_axi4s_vid_out_0_0.v" \
+"../../../bd/design_3/ip/design_3_v_vid_in_axi4s_0_0/sim/design_3_v_vid_in_axi4s_0_0.v" \
+"../../../bd/design_3/ip/design_3_xlconstant_0_0/sim/design_3_xlconstant_0_0.v" \
+"../../../bd/design_3/sim/design_3.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/AXIvideo2Mat.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/Block_proc.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/CvtColor.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/CvtColor_1.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/fifo_w8_d2_A.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/fifo_w11_d2_A.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/fifo_w12_d2_A.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/Filter2D.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/Filter2D_k_buf_0_eOg.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/Mat2AXIvideo.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/regslice_core.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/Sobel_1.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/sobel_mac_muladd_cud.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/sobel_mac_muladd_dEe.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/sobel_mul_mul_22nbkb.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/sobel_mux_32_8_1_1.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/start_for_CvtColoncg.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/start_for_CvtColopcA.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/start_for_Mat2AXIqcK.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/start_for_Sobel_1ocq.v" \
+"../../../../HDMI_3.srcs/sources_1/bd/design_3/ipshared/c547/hdl/verilog/sobel.v" \
+"../../../bd/design_3/ip/design_3_sobel_0_0/sim/design_3_sobel_0_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

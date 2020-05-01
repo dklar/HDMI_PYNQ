@@ -1,0 +1,98 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.2 (win64) Build 2708876 Wed Nov  6 21:40:23 MST 2019
+| Date         : Fri May  1 13:38:35 2020
+| Host         : DESKTOP-8CKUBRS running 64-bit major release  (build 9200)
+| Command      : report_methodology -file design_3_wrapper_methodology_drc_routed.rpt -pb design_3_wrapper_methodology_drc_routed.pb -rpx design_3_wrapper_methodology_drc_routed.rpx
+| Design       : design_3_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 10
++-----------+------------------+--------------------------------------------------------+------------+
+| Rule      | Severity         | Description                                            | Violations |
++-----------+------------------+--------------------------------------------------------+------------+
+| TIMING-2  | Critical Warning | Invalid primary clock source pin                       | 1          |
+| TIMING-4  | Critical Warning | Invalid primary clock redefinition on a clock tree     | 1          |
+| CKBF-1    | Warning          | connects_I_driver_BUFR                                 | 1          |
+| TIMING-9  | Warning          | Unknown CDC Logic                                      | 1          |
+| TIMING-18 | Warning          | Missing input or output delay                          | 2          |
+| XDCB-5    | Warning          | Runtime inefficient way to find pin objects            | 2          |
+| XDCC-1    | Warning          | Scoped Clock constraint overwritten with the same name | 1          |
+| XDCC-7    | Warning          | Scoped Clock constraint overwritten on the same source | 1          |
++-----------+------------------+--------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+TIMING-2#1 Critical Warning
+Invalid primary clock source pin  
+A primary clock design_3_i/dvi2rgb_0/U0/RefClk is created on an inappropriate pin design_3_i/dvi2rgb_0/U0/RefClk. It is recommended to create a primary clock only on a proper clock source (input port or primitive output pin with no timing arc)
+Related violations: <none>
+
+TIMING-4#1 Critical Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock design_3_i/dvi2rgb_0/U0/RefClk is defined downstream of clock clk_out1_design_3_clk_wiz_0_0 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+CKBF-1#1 Warning
+connects_I_driver_BUFR  
+The BUFG cell design_3_i/dvi2rgb_0/U0/GenerateBUFG.ResyncToBUFG_X/InstBUFG I pin is driven by a BUFR cell design_3_i/dvi2rgb_0/U0/TMDS_ClockingX/PixelClkBuffer. For 7-Series devices, this is not a recommended clock topology. Please analyze your clock network and remove the BUFR to BUFG cascade.
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on hdmi_in_ddc_scl_io relative to clock(s) design_3_i/dvi2rgb_0/U0/RefClk
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on hdmi_in_ddc_sda_io relative to clock(s) design_3_i/dvi2rgb_0/U0/RefClk
+Related violations: <none>
+
+XDCB-5#1 Warning
+Runtime inefficient way to find pin objects  
+The option '-through : [get_pins -filter {NAME =~ */*SyncAsync*/oSyncStages_reg[0]/D} -hier]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '4' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/Users/Dennis/Vivado/HDMI_3/HDMI_3.srcs/sources_1/bd/design_3/ip/design_3_dvi2rgb_0_0/src/dvi2rgb.xdc (Line: 13)
+Related violations: <none>
+
+XDCB-5#2 Warning
+Runtime inefficient way to find pin objects  
+The option '-through : [get_pins -filter {NAME =~ *SyncAsync*/oSyncStages_reg[0]/D} -hier]' of constraint 'set_false_path' uses inefficient query to find pin objects (see constraint position '9' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
+Current XDC: c:/Users/Dennis/Vivado/HDMI_3/HDMI_3.srcs/sources_1/bd/design_3/ip/design_3_rgb2dvi_0_0/src/rgb2dvi.xdc (Line: 5)
+Related violations: <none>
+
+XDCC-1#1 Warning
+Scoped Clock constraint overwritten with the same name  
+A new clock constraint create_clock overrides a previous scoped clock constraint with the same name. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 11.695 -name hdmi_in_clk_p -waveform {0.000 5.848} [get_ports hdmi_in_clk_p] (Source: C:/Users/Dennis/Vivado/HDMI_3/HDMI_3.srcs/constrs_1/new/constr.xdc (Line: 11))
+Previous: create_clock -period 6.060 [get_ports hdmi_in_clk_p] (Source: c:/Users/Dennis/Vivado/HDMI_3/HDMI_3.srcs/sources_1/bd/design_3/ip/design_3_dvi2rgb_0_0/src/dvi2rgb_ooc.xdc (Line: 1))
+Related violations: <none>
+
+XDCC-7#1 Warning
+Scoped Clock constraint overwritten on the same source  
+A new clock constraint create_clock overrides a previous scoped clock constraint defined on the same source. It is not recommended to override a scoped (typically an IP) clock constraint and could result in unexpected behaviors.
+New: create_clock -period 11.695 -name hdmi_in_clk_p -waveform {0.000 5.848} [get_ports hdmi_in_clk_p] (Source: C:/Users/Dennis/Vivado/HDMI_3/HDMI_3.srcs/constrs_1/new/constr.xdc (Line: 11))
+Previous: create_clock -period 6.060 [get_ports hdmi_in_clk_p] (Source: c:/Users/Dennis/Vivado/HDMI_3/HDMI_3.srcs/sources_1/bd/design_3/ip/design_3_dvi2rgb_0_0/src/dvi2rgb_ooc.xdc (Line: 1))
+Related violations: <none>
+
+
